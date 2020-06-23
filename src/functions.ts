@@ -1,8 +1,8 @@
-const add = (n1: number, n2: number) => {
+const addition = (n1: number, n2: number) => {
   return n1 + n2;
 };
 
-const printResult = (num: number): void => {
+const printResultFunc = (num: number): void => {
   console.log("Result: " + num);
 };
 
@@ -12,11 +12,11 @@ const addAndHandle = (n1: number, n2: number, cb: (num: number) => void) => {
   cb(result);
 };
 
-console.log(printResult(add(5, 12)));
+console.log(printResultFunc(addition(5, 12)));
 
 let combineValues: (a: number, b: number) => number;
 
-combineValues = add;
+combineValues = addition;
 
 console.log(combineValues(8, 8));
 
